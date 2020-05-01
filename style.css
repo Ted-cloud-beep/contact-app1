@@ -1,0 +1,130 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.container{
+  margin:20px;
+}
+.container .header{
+  border-radius: 10px;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+}
+button{
+  color:#28c7fa;
+  background:   #775ada;
+  border-radius: 5px;
+  border:1px solid #775ada;
+  padding:3px;
+  cursor:pointer;
+  box-shadow:
+}
+.btn-open-modal{
+  font-size:25px;
+  padding:5px;
+}
+button:hover{
+  background: #fff591;
+  color:#ff8a5c;
+}
+.full{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height: 100vh;
+  transition:all 0.3s ease-in-out;
+  display: none;
+  pointer-events:none;
+  z-index:1;
+  background:rgba(0,0,0,0.3);
+}
+.full.visible{
+  pointer-events: auto;
+  display: block;
+}
+.modal{
+  position: fixed;
+  margin: auto;
+  /* height:500px;
+  width:500px; */
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity:0;
+  pointer-events: none;
+  transition:all 0.3s ease-in-out;
+  z-index: 2;
+}
+.modal.show{
+  opacity:1;
+  pointer-events: auto;
+}
+.modal .modal-container{
+  background: #fff;
+  width:500px;
+  height:280px;
+  max-width: 100%;
+  border:2px solid purple;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+.modal .modal-container label{
+  font-size: 20px;
+}
+.modal .modal-container input{
+  display: block;
+  margin:0 0 5px 0;
+  padding:10px;
+  font-size: 25px;
+  border:1px solid purple;
+  border-radius: 10px;
+  width:90%;
+}
+.modal .modal-container input:focus{
+  border-radius: 10px;
+  background: #fdfdfd;
+}
+.modal .modal-container button{
+padding:5px;
+font-size: 16px;
+margin:0 10px 0 10px;
+}
+.list-container ul{
+  list-style: none;
+  margin:0 20px;
+}
+.list-container ul li{
+  border-radius: 10px;
+  background: #f4f4f4;
+  padding:5px;
+  font-size:1.2rem;
+  margin:5px 0;
+}
+button{
+  float:right;
+}
+.searchbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchbar .search{
+  text-align: center;
+  width:50%;
+  height:30px;
+  font-size: 25px;
+}
